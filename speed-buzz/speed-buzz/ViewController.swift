@@ -48,8 +48,33 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func getSpeedLimit() {
-        // Make API call with url  https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1.0,\(latitude),%\(longitude));out%20tags;
-        print("HELLO")
+        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1.0,\(latitude),(longitude));out%20tags;"
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            guard let data = data else { return }
+            //Implement JSON decoding and parsing
+            do {
+                //Decode retrived data with JSONDecoder and assing type of Article object
+//                let articlesData = try JSONDecoder().decode([Article].self, from: data)
+//                
+//                //Get back to the main queue
+//                DispatchQueue.main.async {
+//                    //print(articlesData)
+//                    self.articles = articlesData
+//                    self.collectionView?.reloadData()
+//                }
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+            
+        }.resume()
     }
     
     func determineLocation() {
