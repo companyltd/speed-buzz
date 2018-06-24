@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9994E1F020DF993600CE3F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E1EF20DF993600CE3F7A /* AppDelegate.swift */; };
+		9994E1F220DF993600CE3F7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E1F120DF993600CE3F7A /* ViewController.swift */; };
+		9994E1F520DF993600CE3F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9994E1F320DF993600CE3F7A /* Main.storyboard */; };
+		9994E1F720DF993800CE3F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9994E1F620DF993800CE3F7A /* Assets.xcassets */; };
+		9994E1FA20DF993800CE3F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9994E1F820DF993800CE3F7A /* LaunchScreen.storyboard */; };
+		9994E20520DF993800CE3F7A /* speed_buzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E20420DF993800CE3F7A /* speed_buzzTests.swift */; };
+		9994E21020DF993800CE3F7A /* speed_buzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E20F20DF993800CE3F7A /* speed_buzzUITests.swift */; };
+		9994E21520DF993800CE3F7A /* speed-buzz WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9994E21420DF993800CE3F7A /* speed-buzz WatchKit App.app */; };
+		9994E21B20DF993800CE3F7A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9994E21920DF993800CE3F7A /* Interface.storyboard */; };
+		9994E21D20DF993900CE3F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9994E21C20DF993900CE3F7A /* Assets.xcassets */; };
+		9994E22420DF993900CE3F7A /* speed-buzz WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9994E22320DF993900CE3F7A /* speed-buzz WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9994E22920DF993900CE3F7A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E22820DF993900CE3F7A /* InterfaceController.swift */; };
+		9994E22B20DF993900CE3F7A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E22A20DF993900CE3F7A /* ExtensionDelegate.swift */; };
+		9994E22D20DF993900CE3F7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E22C20DF993900CE3F7A /* NotificationController.swift */; };
+		9994E22F20DF993900CE3F7A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994E22E20DF993900CE3F7A /* ComplicationController.swift */; };
+		9994E23120DF993A00CE3F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9994E23020DF993A00CE3F7A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9994E20120DF993800CE3F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9994E1E420DF993600CE3F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9994E1EB20DF993600CE3F7A;
+			remoteInfo = "speed-buzz";
+		};
+		9994E20C20DF993800CE3F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9994E1E420DF993600CE3F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9994E1EB20DF993600CE3F7A;
+			remoteInfo = "speed-buzz";
+		};
+		9994E21620DF993800CE3F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9994E1E420DF993600CE3F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9994E21320DF993800CE3F7A;
+			remoteInfo = "speed-buzz WatchKit App";
+		};
+		9994E22520DF993900CE3F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9994E1E420DF993600CE3F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9994E22220DF993900CE3F7A;
+			remoteInfo = "speed-buzz WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9994E23920DF993A00CE3F7A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9994E22420DF993900CE3F7A /* speed-buzz WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E23D20DF993A00CE3F7A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9994E21520DF993800CE3F7A /* speed-buzz WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9994E1EC20DF993600CE3F7A /* speed-buzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speed-buzz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9994E1EF20DF993600CE3F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9994E1F120DF993600CE3F7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9994E1F420DF993600CE3F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9994E1F620DF993800CE3F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9994E1F920DF993800CE3F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9994E1FB20DF993800CE3F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9994E20020DF993800CE3F7A /* speed-buzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "speed-buzzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9994E20420DF993800CE3F7A /* speed_buzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speed_buzzTests.swift; sourceTree = "<group>"; };
+		9994E20620DF993800CE3F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9994E20B20DF993800CE3F7A /* speed-buzzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "speed-buzzUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9994E20F20DF993800CE3F7A /* speed_buzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speed_buzzUITests.swift; sourceTree = "<group>"; };
+		9994E21120DF993800CE3F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9994E21420DF993800CE3F7A /* speed-buzz WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speed-buzz WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9994E21A20DF993800CE3F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9994E21C20DF993900CE3F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9994E21E20DF993900CE3F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9994E22320DF993900CE3F7A /* speed-buzz WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "speed-buzz WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9994E22820DF993900CE3F7A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9994E22A20DF993900CE3F7A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9994E22C20DF993900CE3F7A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		9994E22E20DF993900CE3F7A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		9994E23020DF993A00CE3F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9994E23220DF993A00CE3F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9994E23320DF993A00CE3F7A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9994E1E920DF993600CE3F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E1FD20DF993800CE3F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E20820DF993800CE3F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E22020DF993900CE3F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9994E1E320DF993600CE3F7A = {
+			isa = PBXGroup;
+			children = (
+				9994E1EE20DF993600CE3F7A /* speed-buzz */,
+				9994E20320DF993800CE3F7A /* speed-buzzTests */,
+				9994E20E20DF993800CE3F7A /* speed-buzzUITests */,
+				9994E21820DF993800CE3F7A /* speed-buzz WatchKit App */,
+				9994E22720DF993900CE3F7A /* speed-buzz WatchKit Extension */,
+				9994E1ED20DF993600CE3F7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9994E1ED20DF993600CE3F7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9994E1EC20DF993600CE3F7A /* speed-buzz.app */,
+				9994E20020DF993800CE3F7A /* speed-buzzTests.xctest */,
+				9994E20B20DF993800CE3F7A /* speed-buzzUITests.xctest */,
+				9994E21420DF993800CE3F7A /* speed-buzz WatchKit App.app */,
+				9994E22320DF993900CE3F7A /* speed-buzz WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9994E1EE20DF993600CE3F7A /* speed-buzz */ = {
+			isa = PBXGroup;
+			children = (
+				9994E1EF20DF993600CE3F7A /* AppDelegate.swift */,
+				9994E1F120DF993600CE3F7A /* ViewController.swift */,
+				9994E1F320DF993600CE3F7A /* Main.storyboard */,
+				9994E1F620DF993800CE3F7A /* Assets.xcassets */,
+				9994E1F820DF993800CE3F7A /* LaunchScreen.storyboard */,
+				9994E1FB20DF993800CE3F7A /* Info.plist */,
+			);
+			path = "speed-buzz";
+			sourceTree = "<group>";
+		};
+		9994E20320DF993800CE3F7A /* speed-buzzTests */ = {
+			isa = PBXGroup;
+			children = (
+				9994E20420DF993800CE3F7A /* speed_buzzTests.swift */,
+				9994E20620DF993800CE3F7A /* Info.plist */,
+			);
+			path = "speed-buzzTests";
+			sourceTree = "<group>";
+		};
+		9994E20E20DF993800CE3F7A /* speed-buzzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9994E20F20DF993800CE3F7A /* speed_buzzUITests.swift */,
+				9994E21120DF993800CE3F7A /* Info.plist */,
+			);
+			path = "speed-buzzUITests";
+			sourceTree = "<group>";
+		};
+		9994E21820DF993800CE3F7A /* speed-buzz WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9994E21920DF993800CE3F7A /* Interface.storyboard */,
+				9994E21C20DF993900CE3F7A /* Assets.xcassets */,
+				9994E21E20DF993900CE3F7A /* Info.plist */,
+			);
+			path = "speed-buzz WatchKit App";
+			sourceTree = "<group>";
+		};
+		9994E22720DF993900CE3F7A /* speed-buzz WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9994E22820DF993900CE3F7A /* InterfaceController.swift */,
+				9994E22A20DF993900CE3F7A /* ExtensionDelegate.swift */,
+				9994E22C20DF993900CE3F7A /* NotificationController.swift */,
+				9994E22E20DF993900CE3F7A /* ComplicationController.swift */,
+				9994E23020DF993A00CE3F7A /* Assets.xcassets */,
+				9994E23220DF993A00CE3F7A /* Info.plist */,
+				9994E23320DF993A00CE3F7A /* PushNotificationPayload.apns */,
+			);
+			path = "speed-buzz WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9994E1EB20DF993600CE3F7A /* speed-buzz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9994E23E20DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzz" */;
+			buildPhases = (
+				9994E1E820DF993600CE3F7A /* Sources */,
+				9994E1E920DF993600CE3F7A /* Frameworks */,
+				9994E1EA20DF993600CE3F7A /* Resources */,
+				9994E23D20DF993A00CE3F7A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9994E21720DF993800CE3F7A /* PBXTargetDependency */,
+			);
+			name = "speed-buzz";
+			productName = "speed-buzz";
+			productReference = 9994E1EC20DF993600CE3F7A /* speed-buzz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9994E1FF20DF993800CE3F7A /* speed-buzzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9994E24120DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzzTests" */;
+			buildPhases = (
+				9994E1FC20DF993800CE3F7A /* Sources */,
+				9994E1FD20DF993800CE3F7A /* Frameworks */,
+				9994E1FE20DF993800CE3F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9994E20220DF993800CE3F7A /* PBXTargetDependency */,
+			);
+			name = "speed-buzzTests";
+			productName = "speed-buzzTests";
+			productReference = 9994E20020DF993800CE3F7A /* speed-buzzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9994E20A20DF993800CE3F7A /* speed-buzzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9994E24420DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzzUITests" */;
+			buildPhases = (
+				9994E20720DF993800CE3F7A /* Sources */,
+				9994E20820DF993800CE3F7A /* Frameworks */,
+				9994E20920DF993800CE3F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9994E20D20DF993800CE3F7A /* PBXTargetDependency */,
+			);
+			name = "speed-buzzUITests";
+			productName = "speed-buzzUITests";
+			productReference = 9994E20B20DF993800CE3F7A /* speed-buzzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9994E21320DF993800CE3F7A /* speed-buzz WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9994E23A20DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzz WatchKit App" */;
+			buildPhases = (
+				9994E21220DF993800CE3F7A /* Resources */,
+				9994E23920DF993A00CE3F7A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9994E22620DF993900CE3F7A /* PBXTargetDependency */,
+			);
+			name = "speed-buzz WatchKit App";
+			productName = "speed-buzz WatchKit App";
+			productReference = 9994E21420DF993800CE3F7A /* speed-buzz WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9994E22220DF993900CE3F7A /* speed-buzz WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9994E23620DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzz WatchKit Extension" */;
+			buildPhases = (
+				9994E21F20DF993900CE3F7A /* Sources */,
+				9994E22020DF993900CE3F7A /* Frameworks */,
+				9994E22120DF993900CE3F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "speed-buzz WatchKit Extension";
+			productName = "speed-buzz WatchKit Extension";
+			productReference = 9994E22320DF993900CE3F7A /* speed-buzz WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9994E1E420DF993600CE3F7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Company Ltd";
+				TargetAttributes = {
+					9994E1EB20DF993600CE3F7A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9994E1FF20DF993800CE3F7A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 9994E1EB20DF993600CE3F7A;
+					};
+					9994E20A20DF993800CE3F7A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 9994E1EB20DF993600CE3F7A;
+					};
+					9994E21320DF993800CE3F7A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9994E22220DF993900CE3F7A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9994E1E720DF993600CE3F7A /* Build configuration list for PBXProject "speed-buzz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9994E1E320DF993600CE3F7A;
+			productRefGroup = 9994E1ED20DF993600CE3F7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9994E1EB20DF993600CE3F7A /* speed-buzz */,
+				9994E1FF20DF993800CE3F7A /* speed-buzzTests */,
+				9994E20A20DF993800CE3F7A /* speed-buzzUITests */,
+				9994E21320DF993800CE3F7A /* speed-buzz WatchKit App */,
+				9994E22220DF993900CE3F7A /* speed-buzz WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9994E1EA20DF993600CE3F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E1FA20DF993800CE3F7A /* LaunchScreen.storyboard in Resources */,
+				9994E1F720DF993800CE3F7A /* Assets.xcassets in Resources */,
+				9994E1F520DF993600CE3F7A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E1FE20DF993800CE3F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E20920DF993800CE3F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E21220DF993800CE3F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E21D20DF993900CE3F7A /* Assets.xcassets in Resources */,
+				9994E21B20DF993800CE3F7A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E22120DF993900CE3F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E23120DF993A00CE3F7A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9994E1E820DF993600CE3F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E1F220DF993600CE3F7A /* ViewController.swift in Sources */,
+				9994E1F020DF993600CE3F7A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E1FC20DF993800CE3F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E20520DF993800CE3F7A /* speed_buzzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E20720DF993800CE3F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E21020DF993800CE3F7A /* speed_buzzUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994E21F20DF993900CE3F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9994E22D20DF993900CE3F7A /* NotificationController.swift in Sources */,
+				9994E22F20DF993900CE3F7A /* ComplicationController.swift in Sources */,
+				9994E22B20DF993900CE3F7A /* ExtensionDelegate.swift in Sources */,
+				9994E22920DF993900CE3F7A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9994E20220DF993800CE3F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9994E1EB20DF993600CE3F7A /* speed-buzz */;
+			targetProxy = 9994E20120DF993800CE3F7A /* PBXContainerItemProxy */;
+		};
+		9994E20D20DF993800CE3F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9994E1EB20DF993600CE3F7A /* speed-buzz */;
+			targetProxy = 9994E20C20DF993800CE3F7A /* PBXContainerItemProxy */;
+		};
+		9994E21720DF993800CE3F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9994E21320DF993800CE3F7A /* speed-buzz WatchKit App */;
+			targetProxy = 9994E21620DF993800CE3F7A /* PBXContainerItemProxy */;
+		};
+		9994E22620DF993900CE3F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9994E22220DF993900CE3F7A /* speed-buzz WatchKit Extension */;
+			targetProxy = 9994E22520DF993900CE3F7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9994E1F320DF993600CE3F7A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9994E1F420DF993600CE3F7A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9994E1F820DF993800CE3F7A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9994E1F920DF993800CE3F7A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9994E21920DF993800CE3F7A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9994E21A20DF993800CE3F7A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9994E23420DF993A00CE3F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9994E23520DF993A00CE3F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9994E23720DF993A00CE3F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzz WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		9994E23820DF993A00CE3F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzz WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		9994E23B20DF993A00CE3F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = speed_buzz_WatchKit_Extension;
+				INFOPLIST_FILE = "speed-buzz WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		9994E23C20DF993A00CE3F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = speed_buzz_WatchKit_Extension;
+				INFOPLIST_FILE = "speed-buzz WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		9994E23F20DF993A00CE3F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9994E24020DF993A00CE3F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9994E24220DF993A00CE3F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speed-buzz.app/speed-buzz";
+			};
+			name = Debug;
+		};
+		9994E24320DF993A00CE3F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speed-buzz.app/speed-buzz";
+			};
+			name = Release;
+		};
+		9994E24520DF993A00CE3F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzzUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "speed-buzz";
+			};
+			name = Debug;
+		};
+		9994E24620DF993A00CE3F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "speed-buzzUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "speed-buzz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9994E1E720DF993600CE3F7A /* Build configuration list for PBXProject "speed-buzz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9994E23420DF993A00CE3F7A /* Debug */,
+				9994E23520DF993A00CE3F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9994E23620DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzz WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9994E23720DF993A00CE3F7A /* Debug */,
+				9994E23820DF993A00CE3F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9994E23A20DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzz WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9994E23B20DF993A00CE3F7A /* Debug */,
+				9994E23C20DF993A00CE3F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9994E23E20DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9994E23F20DF993A00CE3F7A /* Debug */,
+				9994E24020DF993A00CE3F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9994E24120DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9994E24220DF993A00CE3F7A /* Debug */,
+				9994E24320DF993A00CE3F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9994E24420DF993A00CE3F7A /* Build configuration list for PBXNativeTarget "speed-buzzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9994E24520DF993A00CE3F7A /* Debug */,
+				9994E24620DF993A00CE3F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9994E1E420DF993600CE3F7A /* Project object */;
+}
