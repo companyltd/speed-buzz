@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreMotion
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -15,24 +16,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var count = 0
     var locationManager:CLLocationManager!
     
+    let motion = CMMotionManager()
+    
     // MARK: Properties
     
     @IBOutlet weak var currentSpeed: UILabel!
 
+    // MARK: Boilerplate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         scheduledTimerWithTimeInterval() // Call timer
         
         determineLocation() // Get GPS
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        motion.accelerometerUpdateInterval = 0.2
+        
+        motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, err) in
+            if let speed = data {
+                print(speed)
+            }
+        }
     }
     
     // MARK: Actions
