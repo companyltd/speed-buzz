@@ -13,6 +13,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager:CLLocationManager!
     var timer = Timer()
+    
+    var latitude = ""
+    var longitude = ""
 
     // MARK: Properties
     
@@ -45,6 +48,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func getSpeedLimit() {
+        // Make API call with url  https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1.0,\(latitude),%\(longitude));out%20tags;
         print("HELLO")
     }
     
@@ -67,6 +71,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // other wise this function will be called every time when user location changes.
         
         // manager.stopUpdatingLocation()
+        latitude = String(userLocation.coordinate.latitude)
+        longitude = String(userLocation.coordinate.longitude)
         
         //        print("user latitude = \(userLocation.coordinate.latitude)")
         //        print("user longitude = \(userLocation.coordinate.longitude)")
