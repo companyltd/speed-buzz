@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var timer = Timer()
+    var count = 0
+    
     // MARK: Properties
     
     @IBOutlet weak var currentSpeed: UILabel!
@@ -17,6 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        scheduledTimerWithTimeInterval()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +34,21 @@ class ViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func setSpeed(_ sender: UIButton) {
-        currentSpeed.text = "20"
+        
+    currentSpeed.text = "20"
+        
+    }
+    
+    // MARK: Helpers
+    
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounting(){
+        count = count + 1
+        currentSpeed.text = String(count)
     }
 }
 
