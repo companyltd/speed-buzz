@@ -59,18 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getSpeedLimit), userInfo: nil, repeats: true)
     }
     
-    func getSpeedLimit() {
-        getSpeedLimitAsync(withCompletion: { detail, error in
-            if error != nil {
-                print("Bug")
-            } else if detail != nil {
-                print(detail!)
-                self.speedLimit.text = detail!
-            }
-        })
-    }
-    
-    func getSpeedLimitAsync(withCompletion completion: @escaping (String?, Error?) -> Void) {
+    func getSpeedLimit(withCompletion completion: @escaping (String?, Error?) -> Void) {
         let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:100,\(latitude),%20\(longitude));out%20tags;"
         guard let url = URL(string: urlString) else { return }
         
@@ -117,7 +106,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //        print("user latitude = \(userLocation.coordinate.latitude)")
         //        print("user longitude = \(userLocation.coordinate.longitude)")
         currentSpeed.text = String(Int(round(userLocation.speed)))
-        getSpeedLimit()
+        
+        getSpeedLimit { (success, failure) in
+            DispatchQueue.main.async {
+                self.speedLimit.text = success!
+            }
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
