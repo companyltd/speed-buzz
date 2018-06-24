@@ -23,6 +23,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var speedLimit: UILabel!
     
     
+    struct Response: Decodable {
+        let elements: [SpeedData]
+    }
+    
+    struct SpeedData: Decodable {
+        let tags: Tags
+    }
+    
+    struct Tags: Decodable {
+        let maxspeed: String
+    }
+    
     // MARK: Boilerplate
     
     override func viewDidLoad() {
@@ -48,7 +60,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func getSpeedLimit() {
-        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1.0,\(latitude),(longitude));out%20tags;"
+//        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1000,\(latitude),%20\(longitude));out%20tags;"
+//        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1.0,\(latitude),%20\(longitude));out%20tags;"
+        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:100,\(latitude),%20\(longitude));out%20tags;"
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -56,21 +70,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print(error!.localizedDescription)
             }
             
-            guard let data = data else { return }
-            //Implement JSON decoding and parsing
-            do {
-                //Decode retrived data with JSONDecoder and assing type of Article object
-//                let articlesData = try JSONDecoder().decode([Article].self, from: data)
-//                
-//                //Get back to the main queue
-//                DispatchQueue.main.async {
-//                    //print(articlesData)
-//                    self.articles = articlesData
-//                    self.collectionView?.reloadData()
-//                }
-                
-            } catch let jsonError {
-                print(jsonError)
+            guard let data = data else {
+                print("Error: No data to decode")
+                return
+            }
+            
+            guard let response = try? JSONDecoder().decode(Response.self, from: data) else {
+                print("Error: Couldn't decode data from speed")
+                return
+            }
+            
+//            print(self.latitude)
+//            print(self.longitude)
+            
+            if (!response.elements.isEmpty) {
+//                self.speedLimit.text = String(response.elements[0].tags.maxspeed)
+                print(String(response.elements[0].tags.maxspeed))
             }
             
             
