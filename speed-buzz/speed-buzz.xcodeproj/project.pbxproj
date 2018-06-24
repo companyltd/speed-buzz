@@ -616,6 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KUN45CHH9F;
 				INFOPLIST_FILE = "speed-buzz WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,6 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KUN45CHH9F;
 				INFOPLIST_FILE = "speed-buzz WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -659,6 +661,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KUN45CHH9F;
 				IBSC_MODULE = speed_buzz_WatchKit_Extension;
 				INFOPLIST_FILE = "speed-buzz WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz.watchkitapp";
@@ -677,6 +680,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KUN45CHH9F;
 				IBSC_MODULE = speed_buzz_WatchKit_Extension;
 				INFOPLIST_FILE = "speed-buzz WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.companyltd.speed-buzz.watchkitapp";

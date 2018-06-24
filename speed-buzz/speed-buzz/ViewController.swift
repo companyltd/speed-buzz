@@ -8,15 +8,10 @@
 
 import UIKit
 import CoreLocation
-import CoreMotion
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
-    var timer = Timer()
-    var count = 0
     var locationManager:CLLocationManager!
-    
-    let motion = CMMotionManager()
     
     // MARK: Properties
     
@@ -35,38 +30,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        scheduledTimerWithTimeInterval() // Call timer
-        
-        determineLocation() // Get GPS
-        
-        motion.accelerometerUpdateInterval = 0.2
-        
-        motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, err) in
-            if let speed = data {
-                print(speed)
-            }
-        }
+        determineLocation()
     }
     
     // MARK: Actions
     
-    @IBAction func setSpeed(_ sender: UIButton) {
-        
-    currentSpeed.text = "20"
-        
-    }
-    
     // MARK: Helpers
-    
-    func scheduledTimerWithTimeInterval(){
-        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
-    }
-    
-    @objc func updateCounting(){
-        count = count + 1
-        currentSpeed.text = String(count)
-    }
     
     func determineLocation() {
         locationManager = CLLocationManager()
@@ -88,8 +57,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // manager.stopUpdatingLocation()
         
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
+//        print("user latitude = \(userLocation.coordinate.latitude)")
+//        print("user longitude = \(userLocation.coordinate.longitude)")
+        currentSpeed.text = String(Int(round(userLocation.speed)))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
