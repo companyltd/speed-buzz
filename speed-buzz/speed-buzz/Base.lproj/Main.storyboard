@@ -51,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="currentSpeed" destination="et0-pD-bKf" id="3GA-Jw-Uzc"/>
+                        <outlet property="speedLimit" destination="XIR-7b-OiQ" id="6Sv-dp-ibO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

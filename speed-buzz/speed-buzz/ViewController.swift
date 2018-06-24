@@ -12,30 +12,41 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager:CLLocationManager!
-    
+    var timer = Timer()
+
     // MARK: Properties
     
     @IBOutlet weak var currentSpeed: UILabel!
-
+    @IBOutlet weak var speedLimit: UILabel!
+    
+    
     // MARK: Boilerplate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        scheduledTimerWithTimeInterval()
         determineLocation()
     }
     
-    // MARK: Actions
-    
     // MARK: Helpers
+    
+    func scheduledTimerWithTimeInterval() {
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getSpeedLimit), userInfo: nil, repeats: true)
+    }
+    
+    @objc func getSpeedLimit() {
+        print("HELLO")
+    }
     
     func determineLocation() {
         locationManager = CLLocationManager()
@@ -57,8 +68,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // manager.stopUpdatingLocation()
         
-//        print("user latitude = \(userLocation.coordinate.latitude)")
-//        print("user longitude = \(userLocation.coordinate.longitude)")
+        //        print("user latitude = \(userLocation.coordinate.latitude)")
+        //        print("user longitude = \(userLocation.coordinate.longitude)")
         currentSpeed.text = String(Int(round(userLocation.speed)))
     }
     
@@ -68,4 +79,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
 }
+
+
 
