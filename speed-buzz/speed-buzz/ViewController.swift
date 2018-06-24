@@ -48,7 +48,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        scheduledTimerWithTimeInterval()
+        // scheduledTimerWithTimeInterval()
         determineLocation()
     }
     
@@ -56,39 +56,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func scheduledTimerWithTimeInterval() {
         // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getSpeedLimit), userInfo: nil, repeats: true)
+        // timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getSpeedLimit), userInfo: nil, repeats: true)
     }
     
-    @objc func getSpeedLimit() {
-//        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1000,\(latitude),%20\(longitude));out%20tags;"
-//        let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:1.0,\(latitude),%20\(longitude));out%20tags;"
+    func getSpeedLimit() {
+        getSpeedLimitAsync(withCompletion: { detail, error in
+            if error != nil {
+                print("Bug")
+            } else if detail != nil {
+                print(detail!)
+                self.speedLimit.text = detail!
+            }
+        })
+    }
+    
+    func getSpeedLimitAsync(withCompletion completion: @escaping (String?, Error?) -> Void) {
         let urlString = "https://overpass-api.de/api/interpreter?data=[out:json];way[maxspeed](around:100,\(latitude),%20\(longitude));out%20tags;"
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                print(error!.localizedDescription)
+                completion(nil, error)
+            } else if let data = data {
+                do {
+                    guard let response = try? JSONDecoder().decode(Response.self, from: data) else { completion(nil, error); return }
+                    if (!response.elements.isEmpty) {
+                        completion(String(response.elements[0].tags.maxspeed), nil)
+                    } else {
+                        completion(nil, nil)
+                    }
+                } catch {
+                    completion(nil, error)
+                }
             }
-            
-            guard let data = data else {
-                print("Error: No data to decode")
-                return
-            }
-            
-            guard let response = try? JSONDecoder().decode(Response.self, from: data) else {
-                print("Error: Couldn't decode data from speed")
-                return
-            }
-            
-//            print(self.latitude)
-//            print(self.longitude)
-            
-            if (!response.elements.isEmpty) {
-//                self.speedLimit.text = String(response.elements[0].tags.maxspeed)
-                print(String(response.elements[0].tags.maxspeed))
-            }
-            
-            
         }.resume()
     }
     
@@ -117,6 +117,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //        print("user latitude = \(userLocation.coordinate.latitude)")
         //        print("user longitude = \(userLocation.coordinate.longitude)")
         currentSpeed.text = String(Int(round(userLocation.speed)))
+        getSpeedLimit()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
