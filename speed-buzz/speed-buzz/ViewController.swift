@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Properties
+    
+    @IBOutlet weak var currentSpeed: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // MARK: Actions
+    
+    @IBAction func setSpeed(_ sender: UIButton) {
+        currentSpeed.text = "20"
+    }
 }
 
